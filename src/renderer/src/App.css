@@ -1,0 +1,62 @@
+.App {
+  min-width: 476px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.App__buttons {
+  display: flex;
+  flex-flow: wrap;
+  gap: 9px;
+  justify-content: center;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.App__content {
+  margin: 1em 0;
+}
+
+.App__header {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.App__logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+  .App__logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+
+  .App__logo.App__logo--react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+
+@keyframes App__logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .App__logo.App__logo--react:hover {
+    filter: drop-shadow(0 0 2em #61dafb);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App__logo.App__logo--react {
+    animation: App__logo-spin infinite 20s linear;
+  }
+}
