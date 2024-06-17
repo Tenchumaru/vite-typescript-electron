@@ -7,6 +7,7 @@
   "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
   "include": [
     "src/*.d.ts",
+    "src/*.ts",
     "src/renderer/src/**/*",
     "src/renderer/src/**/*.ts",
     "src/renderer/src/**/*.tsx"

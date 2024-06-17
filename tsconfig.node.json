@@ -6,12 +6,13 @@
     "moduleResolution": "Bundler",
     "skipLibCheck": true,
     "strict": true,
-    "types": ["electron-vite/node"]
+    "types": [ "electron-vite/node" ]
   },
   "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
   "include": [
     "electron-vite/node",
     "src/*.d.ts",
+    "src/*.ts",
     "src/main/**/*.ts",
     "src/preload/**/*.ts"
   ]
