@@ -1,28 +1,28 @@
+appId: com.example.vite-typescript-electron
 productName: Vite TypeScript Electron
 directories:
-  buildResources: build
+  buildResources: resources
 files:
-  - 'out'
+  - out
+asarUnpack:
+  - resources/**
 win:
-  executableName: Vite TypeScript Electron
-  icon: src/favicon.ico
-nsis:
-  artifactName: '${productName} ${version} setup.${ext}'
-  shortcutName: ${productName}
-  uninstallDisplayName: ${productName}
-  createDesktopShortcut: always
+  icon: resources/favicon.ico
 mac:
   category: public.app-category.utilities
+  entitlementsInherit: resources/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
   icon: src/favicon.png
+  notarize: false
   target: 7z
-dmg:
-  artifactName: ${name}-${version}.${ext}
 linux:
   target:
     - AppImage
     - snap
     - deb
   category: Utility
-appImage:
-  artifactName: ${name}-${version}.${ext}
 npmRebuild: false
